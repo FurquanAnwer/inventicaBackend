@@ -13,7 +13,7 @@ app = FastAPI(title="News Search API")
 # CORS configuration 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # frontend URL
+    allow_origins=["http://localhost:5173","https://inventica-frontend.vercel.app"],  # frontend URL
     allow_credentials=True,
     allow_methods=["GET"],
     allow_headers=["*"],
@@ -87,6 +87,6 @@ async def root():
 
 
 # Run with: uvicorn main:app --reload
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+# if __name__ == "__main__":
+#     import uvicorn
+#     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
